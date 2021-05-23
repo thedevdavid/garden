@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
           <div className="w-full lg:w-5/12">
             <Link href="/projects">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-blur transition duration-200 cursor-pointer">
+              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
                     width={36}
