@@ -20,6 +20,12 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
         </div>
+        <p className="mb-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          3D assets from:{' '}
+          <Link href="https://sketchfab.com/3d-models/space-exploration-wlp-series-8-91964c1ce1a34c3985b6257441efa500">
+            overlaps
+          </Link>
+        </p>
       </div>
     </footer>
   )

@@ -10,7 +10,7 @@ function Model({ url }) {
   return (
     <group ref={group} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group position={[0, 0.2, -5.33]} rotation={[0.24, -0.55, 0.56]} scale={[7, 7, 7]}>
+        <group position={[0, 0.2, -5.33]} rotation={[0.24, -0.55, 0.56]} scale={[5, 5, 5]}>
           <mesh
             castShadow
             receiveShadow
@@ -64,9 +64,9 @@ const Hero = () => {
         </Canvas>
         <Loader />
       </div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col items-center justify-between lg:flex-row">
-          <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 xl:mb-0 xl:w-6/12">
+      <div className="max-w-7xl mx-auto relative">
+        <div className="flex flex-col items-start justify-between">
+          <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 xl:mb-0 xl:w-6/12 sm:z-10">
             <p className="mb-2 text-base font-medium tracking-tight text-green-600 uppercase">
               Digital Garden of
             </p>
@@ -102,7 +102,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Or follow me on Twitter
+                I'm talking on Twitter too
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -110,21 +110,21 @@ const Hero = () => {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   className="w-4 h-4 ml-1"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 36 36"
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </a>
             </Link>
           </div>
-          <div className="w-full xl:w-5/12">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-2 sm:z-10">
             <Link href="/projects">
-              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transition duration-200 cursor-pointer">
+              <div className="flex flex-col items-start justify-between p-6 dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-80 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 dark:bg-opacity-50 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
-                    width={36}
-                    height={36}
-                    viewBox="0 0 24 24"
+                    width={12}
+                    height={12}
+                    viewBox="0 0 36 36"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -148,18 +148,18 @@ const Hero = () => {
               </div>
             </Link>
             <Link href="/content">
-              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transition duration-200 cursor-pointer">
+              <div className="flex flex-col items-start justify-between p-6 dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-80 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 dark:bg-opacity-50 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
-                    width={36}
-                    height={36}
-                    viewBox="0 0 24 24"
+                    width={12}
+                    height={12}
+                    viewBox="0 0 36 36"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="leading-6 text-center text-gray-700 dark:text-gray-50 align-middle stroke-current w-12 h-12"
+                    className="leading-2 text-center text-gray-700 dark:text-gray-50 align-middle stroke-current w-12 h-12"
                   >
                     <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
                   </svg>
@@ -176,18 +176,18 @@ const Hero = () => {
             </Link>
 
             <Link href="/mentoring">
-              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transition duration-200 cursor-pointer">
+              <div className="flex flex-col items-start justify-between p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-80 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 dark:bg-opacity-50 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
-                    width={36}
-                    height={36}
-                    viewBox="0 0 24 24"
+                    width={12}
+                    height={12}
+                    viewBox="0 0 36 36"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="leading-6 text-center text-gray-700 dark:text-gray-50 align-middle stroke-current w-12 h-12"
+                    className="leading-2 text-center text-gray-700 dark:text-gray-50 align-middle stroke-current w-12 h-12"
                   >
                     <path d="M23 6L13.5 15.5 8.5 10.5 1 18" />
                     <path d="M17 6L23 6 23 12" />
