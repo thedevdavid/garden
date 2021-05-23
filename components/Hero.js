@@ -1,10 +1,58 @@
+import React, { Suspense, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { Loader, useGLTF, OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei'
 import Image from 'next/image'
 import Link from 'next/link'
+
+function Model({ url }) {
+  const { nodes } = useGLTF(url)
+  console.log(nodes)
+  return (
+    <group rotation={[-Math.PI / 2, 0, 0]} position={[0, -7, 0]} scale={7}>
+      <group rotation={[Math.PI / 13.5, -Math.PI / 5.8, Math.PI / 5.6]}>
+        <mesh
+          receiveShadow
+          castShadow
+          geometry={nodes.planet001_1.geometry}
+          material={nodes.planet001_1.material}
+        />
+        <mesh geometry={nodes.planet001_2.geometry} material={nodes.planet001_2.material} />
+      </group>
+    </group>
+  )
+}
 
 const Hero = () => {
   return (
     <section className="flex items-center justify-center py-16 min-w-screen">
-      <div className="max-w-7xl mx-auto">
+      <div className="absolute top-0 right-0 z-0 w-full h-full pb-32 -mr-64 overflow-hidden">
+        <Canvas dpr={[1.5, 2]} linear shadows>
+          <fog attach="fog" args={['#272730', 16, 30]} />
+          <ambientLight intensity={0.75} />
+          <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={75}>
+            <pointLight intensity={1} position={[-10, -25, -10]} />
+            <spotLight
+              castShadow
+              intensity={2.25}
+              angle={0.2}
+              penumbra={1}
+              position={[-25, 20, -15]}
+              shadow-mapSize={[1024, 1024]}
+              shadow-bias={-0.0001}
+            />
+          </PerspectiveCamera>
+          <Model url="/static/scene.glb" />
+          <OrbitControls
+            autoRotate
+            enablePan={false}
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Stars radius={500} depth={50} count={1000} factor={10} />
+        </Canvas>
+      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center justify-between lg:flex-row">
           <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 xl:mb-0 xl:w-6/12">
             <p className="mb-2 text-base font-medium tracking-tight text-green-600 uppercase">
@@ -59,7 +107,7 @@ const Hero = () => {
           </div>
           <div className="w-full xl:w-5/12">
             <Link href="/projects">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
+              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group hover:bg-gray-100 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl dark:hover:bg-opacity-20 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
                     width={36}
