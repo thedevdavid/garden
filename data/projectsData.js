@@ -2,13 +2,13 @@ const projectsData = [
   {
     title: 'SaaS Kit',
     description: `Work in progress`,
-    imgSrc: '/static/images/google.png',
+    imgSrc: '/static/images/twitter-card.jpg',
     href: '/saas-kit',
   },
   {
     title: 'Tway',
     description: `Work in progress`,
-    imgSrc: '/static/images/time-machine.jpg',
+    imgSrc: '/static/images/tway.png',
     href: 'https://twayapp.com',
   },
 ]

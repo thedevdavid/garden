@@ -7,18 +7,16 @@ import siteMetadata from '@/data/siteMetadata'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/content/${fileName}`
 const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/content/${slug}`
-  )}`
+  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${slug}`)}`
 
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ children, frontMatter, next, prev }) {
   const { slug, fileName, date, title, tags } = frontMatter
 
   return (
     <SectionContainer>
-      <BlogSeo url={`${siteMetadata.siteUrl}/content/${frontMatter.slug}`} {...frontMatter} />
+      <BlogSeo url={`${siteMetadata.siteUrl}/${frontMatter.slug}`} {...frontMatter} />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
@@ -101,7 +99,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                           Previous Article
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
-                          <Link href={`/content/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -111,7 +109,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                           Next Article
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
-                          <Link href={`/content/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
                     )}

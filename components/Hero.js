@@ -12,7 +12,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col md:flex-row justify-start items-center">
               <Image
-                src="/davidlevai-icon.png"
+                src="/static/images/avatar.png"
                 alt="An image about David Levai"
                 className="border-2 border-gray-200 rounded-none w-24 h-24 shadow-md"
                 width={56}
