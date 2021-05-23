@@ -7,7 +7,9 @@ import siteMetadata from '@/data/siteMetadata'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/blog/${slug}`)}`
+  `https://mobile.twitter.com/search?q=${encodeURIComponent(
+    `${siteMetadata.siteUrl}/blog/${slug}`
+  )}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -49,15 +51,19 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     <dl className="text-sm font-medium leading-5 whitespace-nowrap">
                       <dt className="sr-only">Name</dt>
                       <dd className="text-gray-900 dark:text-gray-100">{siteMetadata.author}</dd>
-                      <dt className="sr-only">Twitter</dt>
-                      <dd>
-                        <Link
-                          href={siteMetadata.twitter}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-                        >
-                          {siteMetadata.twitter.replace('https://twitter.com/', '@')}
-                        </Link>
-                      </dd>
+                      {typeof siteMetadata.twitter === 'string' && (
+                        <>
+                          <dt className="sr-only">Twitter</dt>
+                          <dd>
+                            <Link
+                              href={siteMetadata.twitter}
+                              className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                            >
+                              {siteMetadata.twitter.replace('https://twitter.com/', '@')}
+                            </Link>
+                          </dd>
+                        </>
+                      )}
                     </dl>
                   </li>
                 </ul>
