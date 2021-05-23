@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
   useAnalytics()
   const { pathname } = useRouter()
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="dark" storageKey="iamdavidlevai-digital-garden">
       <MDXProvider components={MDXComponents}>
         <Head>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
