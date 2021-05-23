@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="flex items-center justify-center py-16 min-w-screen bg-pattern">
-      <div className="max-w-7xl px-12 mx-auto md:px-16 xl:px-10">
+    <section className="flex items-center justify-center py-16 min-w-screen">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center justify-between lg:flex-row">
-          <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 lg:mb-0 lg:w-6/12">
+          <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 xl:mb-0 xl:w-6/12">
             <p className="mb-2 text-base font-medium tracking-tight text-green-600 uppercase">
               Digital Garden of
             </p>
@@ -27,32 +27,39 @@ const Hero = () => {
               </h2>
             </div>
             <p className="mt-6 text-lg text-gray-600 dark:text-gray-200">
-              I'm a COO, software engineer, writer, YouTuber. This is my personal site where I post
-              about things that I am interested in.
+              I'm a Part-Time Creator creating content about building IT businesses and
+              production-ready apps. This is my personal site where I post about my journey and
+              things that I am interested in.
             </p>
             <p className="mt-2 text-lg text-gray-600 dark:text-gray-200">
               Generally speaking building business, building apps, freelancing, productivity,
               working out, and some other millenial things. If you are interested in these, look
               around.
             </p>
-            <p className="my-3 font-bold text-sm leading-6 text-green-600 flex flex-row items-center">
-              Or follow me on Twitter
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-1"
-                viewBox="0 0 24 24"
+            <Link href="https://twitter.com/iamdavidlevai">
+              <a
+                className="my-3 font-bold text-sm leading-6 text-green-600 flex flex-row items-center"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </p>
+                Or follow me on Twitter
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="w-4 h-4 ml-1"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </Link>
           </div>
-          <div className="w-full lg:w-5/12">
+          <div className="w-full xl:w-5/12">
             <Link href="/projects">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
+              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
                     width={36}
@@ -81,7 +88,7 @@ const Hero = () => {
               </a>
             </Link>
             <Link href="/content">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
                     width={36}
@@ -109,7 +116,7 @@ const Hero = () => {
             </Link>
 
             <Link href="/mentoring">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
                     width={36}

@@ -1,6 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { PageSeo } from '@/components/SEO'
+import Link from '@/components/Link'
 
 export default function About() {
   return (
@@ -27,7 +28,6 @@ export default function About() {
             <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />
-              <SocialIcon kind="facebook" href={siteMetadata.facebook} />
               <SocialIcon kind="youtube" href={siteMetadata.youtube} />
               <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
               <SocialIcon kind="twitter" href={siteMetadata.twitter} />
@@ -35,19 +35,25 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His
-              research interests includes complexity modelling of tailwinds, headwinds and
-              crosswinds.
+              I'm a Part-Time Creator and full-time COO @{' '}
+              <Link href="https://screamingbox.com">ScreamingBox</Link>.
             </p>
             <p>
-              He leads the clean energy group which develops 3D air pollution-climate models, writes
-              differential equation solvers, and manufactures titanium plated air ballons. In his
-              free time he bakes raspberry pi.
+              I create various types of content across{' '}
+              <Link href={siteMetadata.twitter}>Twitter</Link>,{' '}
+              <Link href={siteMetadata.youtube}>YouTube</Link>, and this blog about{' '}
+              <strong>building IT businesses and production-ready apps.</strong>
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique
-              placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem
-              nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+              I worked as a freelancer full-stack developer, spent my time working with startups and
+              small businesses since my teenage years and now I started translating this knowledge
+              into 2 things. <strong>Scaling a digital agency and building open startups.</strong>
+            </p>
+            <p>
+              This page is currently a draft. Look back later to see what's changed.{' '}
+              <span role="img" aria-label="roadwork sign">
+                🚧
+              </span>
             </p>
           </div>
         </div>

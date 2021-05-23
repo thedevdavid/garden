@@ -44,7 +44,7 @@ export default function Blog({ post, prev, next }) {
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
-            Under Construction{' '}
+            This page is currently a draft. Look back later to see what's changed.{' '}
             <span role="img" aria-label="roadwork sign">
               🚧
             </span>

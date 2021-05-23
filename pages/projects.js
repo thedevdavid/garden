@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
-import Link from '@/components/Link'
 import Card from '@/components/Card'
 import { PageSeo } from '@/components/SEO'
 
@@ -19,7 +17,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your projects with a hero image (16 x 9)
+            Things I've built in the past years and I'm proud of.
           </p>
         </div>
         <div className="container py-12">

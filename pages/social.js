@@ -1,30 +1,20 @@
 import siteMetadata from '@/data/siteMetadata'
 import { PageSeo } from '@/components/SEO'
-import usesData from '@/data/usesData'
+import socialData from '@/data/socialData'
 import Link from '@/components/Link'
 
-export default function Uses() {
+export default function Social() {
   return (
     <>
       <PageSeo
-        title={`Uses - ${siteMetadata.author}`}
+        title={`Social Media - ${siteMetadata.author}`}
         description={siteMetadata.description}
-        url={`${siteMetadata.siteUrl}/uses`}
+        url={`${siteMetadata.siteUrl}/social`}
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Uses
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Software and hardware collection of things I'm using daily. Some of it are affiliate
-            links. If you buy through them you won't pay more, but I'll get a small comission. This
-            helps me bring more free content day by day
-          </p>
-        </div>
         <div className="container py-12">
-          <div className="grid grid-cols-2">
-            {usesData.map((d) => (
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {socialData.map((d) => (
               <Link key={d.href} href={d.href}>
                 <a className="flex items-center justify-start w-full col-span-1 p-6 hover:bg-gray-100 hover:bg-opacity-40 hover:rounded-xl group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter transition duration-200 cursor-pointer mb-8">
                   <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
