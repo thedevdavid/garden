@@ -1,31 +1,40 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Loader, useGLTF, OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Model({ url }) {
-  const { nodes } = useGLTF(url)
-  console.log(nodes)
+  const group = useRef()
+  const { nodes, materials } = useGLTF(url)
   return (
-    <group rotation={[-Math.PI / 2, 0, 0]} position={[0, -7, 0]} scale={7}>
-      <group rotation={[Math.PI / 13.5, -Math.PI / 5.8, Math.PI / 5.6]}>
-        <mesh
-          receiveShadow
-          castShadow
-          geometry={nodes.planet001_1.geometry}
-          material={nodes.planet001_1.material}
-        />
-        <mesh geometry={nodes.planet001_2.geometry} material={nodes.planet001_2.material} />
+    <group ref={group} dispose={null}>
+      <group rotation={[-Math.PI / 2, 0, 0]}>
+        <group position={[0, 0.2, -5.33]} rotation={[0.24, -0.55, 0.56]} scale={[7, 7, 7]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.planet001_1.geometry}
+            material={nodes.planet001_1.material}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.planet001_2.geometry}
+            material={nodes.planet001_2.material}
+          />
+        </group>
       </group>
     </group>
   )
 }
 
+useGLTF.preload('/static/scene.glb')
+
 const Hero = () => {
   return (
     <section className="flex items-center justify-center py-16 min-w-screen">
-      <div className="absolute top-0 right-0 z-0 w-full h-full pb-32 -mr-64 overflow-hidden">
+      <div className="absolute top-0 right-0 z-0 w-full h-full overflow-y-visible">
         <Canvas dpr={[1.5, 2]} linear shadows>
           <fog attach="fog" args={['#272730', 16, 30]} />
           <ambientLight intensity={0.75} />
@@ -41,7 +50,9 @@ const Hero = () => {
               shadow-bias={-0.0001}
             />
           </PerspectiveCamera>
-          <Model url="/static/scene.glb" />
+          <Suspense fallback={null}>
+            <Model url="/static/scene.glb" />
+          </Suspense>
           <OrbitControls
             autoRotate
             enablePan={false}
@@ -49,8 +60,9 @@ const Hero = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
-          <Stars radius={500} depth={50} count={1000} factor={10} />
+          <Stars radius={500} depth={30} count={600} factor={10} />
         </Canvas>
+        <Loader />
       </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center justify-between lg:flex-row">
@@ -107,7 +119,7 @@ const Hero = () => {
           </div>
           <div className="w-full xl:w-5/12">
             <Link href="/projects">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group hover:bg-gray-100 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl dark:hover:bg-opacity-20 transition duration-200 cursor-pointer">
+              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
                     width={36}
@@ -133,10 +145,10 @@ const Hero = () => {
                     production-ready software.
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
             <Link href="/content">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
                     width={36}
@@ -160,11 +172,11 @@ const Hero = () => {
                     Videos and written notes about freelancing, and building production-ready apps.
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
 
             <Link href="/mentoring">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
                     width={36}
@@ -190,7 +202,7 @@ const Hero = () => {
                     in business.
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
           </div>
         </div>
