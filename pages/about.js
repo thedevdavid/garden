@@ -22,8 +22,8 @@ export default function About() {
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
               {siteMetadata.author}
             </h3>
-            <div className="text-gray-500 dark:text-gray-400">Professor of Atmospheric Science</div>
-            <div className="text-gray-500 dark:text-gray-400">Stanford University</div>
+            <div className="text-gray-500 dark:text-gray-400">Creator & COO</div>
+            <div className="text-gray-500 dark:text-gray-400">Currently @ ScreamingBox</div>
             <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />

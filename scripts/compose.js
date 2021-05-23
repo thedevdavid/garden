@@ -21,11 +21,11 @@ title: ${title}
 date: '${date}'
 tags: []
 draft: true
-summary: 
+summary:
 images: []
 ---
 `
 
-fs.writeFile(`data/blog/${fileName}.${ext}`, frontMatter, (err) => {
+fs.writeFile(`data/content/${fileName}.${ext}`, frontMatter, (err) => {
   if (err) throw err
 })

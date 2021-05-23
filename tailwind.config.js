@@ -20,6 +20,8 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        darkBg: '#101827',
+        darkBgLight: '#1F2936',
         blue: colors.lightBlue,
         code: {
           green: '#b5f4a5',
@@ -29,6 +31,7 @@ module.exports = {
           blue: '#93ddfd',
           white: '#fff',
         },
+        ...colors,
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -145,6 +148,13 @@ module.exports = {
     },
   },
   variants: {
+    extend: {
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
+      inset: ['checked'],
+      scale: ['group-hover', 'hover'],
+      zIndex: ['hover', 'active'],
+    },
     typography: ['dark'],
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

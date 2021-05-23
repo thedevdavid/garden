@@ -6,7 +6,7 @@ import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 
 export async function getStaticProps() {
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags('content')
 
   return { props: { tags } }
 }
@@ -17,7 +17,7 @@ export default function Tags({ tags }) {
     <>
       <PageSeo
         title={`Tags - ${siteMetadata.author}`}
-        description="Things I blog about"
+        description="Things I write about"
         url={`${siteMetadata.siteUrl}/tags`}
       />
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">

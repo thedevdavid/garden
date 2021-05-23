@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
+import Hero from '@/components/Hero'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
@@ -8,7 +9,7 @@ const MAX_DISPLAY = 5
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('content')
 
   return { props: { posts } }
 }
@@ -21,6 +22,7 @@ export default function Home({ posts }) {
         description={siteMetadata.description}
         url={siteMetadata.siteUrl}
       />
+      <Hero />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -51,7 +53,7 @@ export default function Home({ posts }) {
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/content/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
@@ -69,7 +71,7 @@ export default function Home({ posts }) {
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
-                          href={`/blog/${slug}`}
+                          href={`/content/${slug}`}
                           className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                           aria-label={`Read "${title}"`}
                         >
@@ -87,7 +89,7 @@ export default function Home({ posts }) {
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
-            href="/blog"
+            href="/content"
             className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
             aria-label="all posts"
           >
