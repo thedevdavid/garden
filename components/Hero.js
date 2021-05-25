@@ -10,7 +10,7 @@ function Model({ url }) {
   return (
     <group ref={group} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group position={[0, 0.2, -5.33]} rotation={[0.24, -0.55, 0.56]} scale={[5, 5, 5]}>
+        <group position={[0, 0.02, -6.33]} rotation={[0.24, -0.55, 0.56]} scale={[6, 6, 6]}>
           <mesh
             castShadow
             receiveShadow
@@ -51,7 +51,7 @@ const Hero = () => {
             />
           </PerspectiveCamera>
           <Suspense fallback={null}>
-            <Model url="/static/scene.glb" />
+            <Model url="/static/rokett.glb" />
           </Suspense>
           <OrbitControls
             autoRotate
