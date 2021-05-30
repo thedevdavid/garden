@@ -65,8 +65,8 @@ export default function About() {
             <p>
               Vlogs, essays, tips, and discussions. About building an international digital product
               agency, building production-ready apps, and being mindful, productive as an
-              entrepreneur in IT. Feel free to read about my background, knowledge, experience, and
-              my why in the next few paragraphs.
+              entrepreneur in IT. If you have some more time, feel free to read about my background,
+              knowledge, experience, and my why in the next few paragraphs:
             </p>
             <p>
               When I'm not creating content, or managing a business, I am a full-stack developer who
