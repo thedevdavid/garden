@@ -61,6 +61,10 @@ export default function About() {
                 people, and support each other.
               </li>
             </ul>
+            <p>
+              Also, when I'm away from the internet, I spend my time working out, travel to
+              interesting places, playing some Rainbow Six: Siege.
+            </p>
             <h2>What you'll find here?</h2>
             <p>
               Vlogs, essays, tips, and discussions. About building an international digital product
