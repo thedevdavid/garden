@@ -21,16 +21,19 @@ const siteMetadata = require('../data/siteMetadata')
               .map((page) => {
                 const path = page
                   .replace('pages/', '/')
-                  .replace('data/content', '/')
+                  .replace('data/content', '')
                   .replace('public/', '/')
                   .replace('.js', '')
                   .replace('.mdx', '')
                   .replace('.md', '')
                   .replace('/feed.xml', '')
                 const route = path === '/index' ? '' : path
+                if (page === `pages/404.js` || page === `pages/[...slug].js`) {
+                  return
+                }
                 return `
                         <url>
-                            <loc>${`${siteMetadata.siteUrl}${route}`}</loc>
+                            <loc>${siteMetadata.siteUrl}${route}</loc>
                         </url>
                     `
               })
