@@ -42,6 +42,7 @@ const LayoutWrapper = ({ isHome, children }) => {
                   </Link>
                 ))}
               </div>
+              <ThemeSwitch />
               <MobileNav />
             </div>
           </header>
