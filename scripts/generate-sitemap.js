@@ -1,4 +1,4 @@
-import { globby } from 'globby'
+const globby = require('globby')
 const fs = require('fs')
 const prettier = require('prettier')
 const siteMetadata = require('../data/siteMetadata')
