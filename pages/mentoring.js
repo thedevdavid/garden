@@ -1,13 +1,12 @@
 import siteMetadata from '@/data/siteMetadata'
-import { PageSeo } from '@/components/SEO'
+import { PageSEO } from '@/components/SEO'
 
 export default function Mentoring() {
   return (
     <>
-      <PageSeo
+      <PageSEO
         title={`Mentoring - ${siteMetadata.author}`}
         description={`Mentoring - ${siteMetadata.author}`}
-        url={`${siteMetadata.siteUrl}/mentoring`}
       />
       <div className="divide-y">
         <div className="mt-24 text-center">

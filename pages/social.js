@@ -1,15 +1,14 @@
 import siteMetadata from '@/data/siteMetadata'
-import { PageSeo } from '@/components/SEO'
+import { PageSEO } from '@/components/SEO'
 import socialData from '@/data/socialData'
 import Link from '@/components/Link'
 
 export default function Social() {
   return (
     <>
-      <PageSeo
+      <PageSEO
         title={`Social Media - ${siteMetadata.author}`}
         description={siteMetadata.description}
-        url={`${siteMetadata.siteUrl}/social`}
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="container py-12">

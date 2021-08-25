@@ -5,9 +5,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  future: {
-    webpack5: true,
+  eslint: {
+    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
+  experimental: { esmExternals: true },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
@@ -37,18 +38,5 @@ module.exports = withBundleAnalyzer({
     }
 
     return config
-  },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // Rewrite to prevent a problem when deploying at vercel
-        // which directs a user to the index.xml instead of index.html
-        // https://github.com/timlrx/tailwind-nextjs-starter-blog/issues/16
-        {
-          source: '/',
-          destination: '/index',
-        },
-      ],
-    }
   },
 })

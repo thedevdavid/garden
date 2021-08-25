@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import Hero from './Hero'
+import ThemeSwitch from './ThemeSwitch'
 
 const LayoutWrapper = ({ isHome, children }) => {
   if (isHome) {
@@ -83,7 +84,7 @@ const LayoutWrapper = ({ isHome, children }) => {
                   </Link>
                 ))}
               </div>
-              {/* <ThemeSwitch /> */}
+              <ThemeSwitch />
               <MobileNav />
             </div>
           </header>

@@ -1,9 +1,9 @@
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
-import { PageSeo } from '@/components/SEO'
+import { PageSEO } from '@/components/SEO'
 
-export const POSTS_PER_PAGE = 10
+export const POSTS_PER_PAGE = 5
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('content')
@@ -19,16 +19,12 @@ export async function getStaticProps() {
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSeo
-        title={`Content - ${siteMetadata.author}`}
-        description={siteMetadata.description}
-        url={`${siteMetadata.siteUrl}/content`}
-      />
+      <PageSEO title={`Content - ${siteMetadata.author}`} description={siteMetadata.description} />
       <ListLayout
-        initialDisplayPosts={initialDisplayPosts}
         posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="All Essays"
+        title="All Content"
       />
     </>
   )

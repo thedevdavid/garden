@@ -1,10 +1,10 @@
-import MDXComponents from '@/components/MDXComponents'
-import PageTitle from '@/components/PageTitle'
-import PostLayout from '@/layouts/PostLayout'
-import generateRss from '@/lib/generate-rss'
-import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 import fs from 'fs'
-import { MDXRemote } from 'next-mdx-remote'
+import PageTitle from '@/components/PageTitle'
+import generateRss from '@/lib/generate-rss'
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+
+const DEFAULT_LAYOUT = 'PostLayout'
 
 export async function getStaticPaths() {
   const posts = getFiles('content')
@@ -24,27 +24,39 @@ export async function getStaticProps({ params }) {
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
   const post = await getFileBySlug('content', params.slug.join('/'))
+  const authorList = post.frontMatter.authors || ['default']
+  const authorPromise = authorList.map(async (author) => {
+    const authorResults = await getFileBySlug('authors', [author])
+    return authorResults.frontMatter
+  })
+  const authorDetails = await Promise.all(authorPromise)
 
   // rss
   const rss = generateRss(allPosts)
   fs.writeFileSync('./public/feed.xml', rss)
 
-  return { props: { post, prev, next } }
+  return { props: { post, authorDetails, prev, next } }
 }
 
-export default function Blog({ post, prev, next }) {
-  const { mdxSource, frontMatter } = post
+export default function Blog({ post, authorDetails, prev, next }) {
+  const { mdxSource, toc, frontMatter } = post
 
   return (
     <>
       {frontMatter.draft !== true ? (
-        <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-          <MDXRemote {...mdxSource} components={MDXComponents} />
-        </PostLayout>
+        <MDXLayoutRenderer
+          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          toc={toc}
+          mdxSource={mdxSource}
+          frontMatter={frontMatter}
+          authorDetails={authorDetails}
+          prev={prev}
+          next={next}
+        />
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
-            This page is currently a draft. Look back later to see what's changed.{' '}
+            Under Construction{' '}
             <span role="img" aria-label="roadwork sign">
               🚧
             </span>
