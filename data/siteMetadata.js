@@ -12,6 +12,7 @@ const siteMetadata = {
   email: 'david@davidlevai.com',
   github: 'https://github.com/DLevai94',
   twitter: 'https://twitter.com/iamdavidlevai',
+  tiktok: 'https://tiktok.com/@iamdavidlevai',
   youtube: 'https://dvdlv.me/yt',
   linkedin: 'https://linkedin.com/in/iamdavidlevai',
   locale: 'en-US',

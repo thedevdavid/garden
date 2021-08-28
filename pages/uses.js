@@ -7,15 +7,15 @@ export default function Uses() {
   return (
     <>
       <PageSEO title={`Uses - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 max-w-6xl mx-auto">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Uses
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             Software and hardware collection of things I'm using daily. Some of it are affiliate
-            links. If you buy through them you won't pay more, but I'll get a small comission. This
-            helps me bring more free content day by day
+            links <em>(marked by *)</em>. If you buy through them you won't pay more, but I'll get a
+            small comission. This helps me deliver free content day by day.
           </p>
         </div>
         <div className="container py-12">
@@ -56,12 +56,6 @@ export default function Uses() {
             ))}
           </div>
         </div>
-        <p>
-          This page is currently a draft. Look back later to see what's changed.{' '}
-          <span role="img" aria-label="roadwork sign">
-            🚧
-          </span>
-        </p>
       </div>
     </>
   )

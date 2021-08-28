@@ -2,7 +2,10 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
+import SuccessMessage from '@/components/SuccessMessage'
 import Image from '@/components/Image'
+import { useForm } from 'react-hook-form'
+import { ErrorMessage } from '@hookform/error-message'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
@@ -13,6 +16,19 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitSuccessful, isSubmitting },
+  } = useForm()
+
+  const subscribe = async ({ email }) => {
+    const res = await fetch(`/api/subscribe?email=${email}&list=monthly`)
+    return res
+  }
+
+  const onSubmit = (data) => subscribe(data)
   const { slug, fileName, date, title, tags } = frontMatter
 
   return (
@@ -91,6 +107,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </div>
               {/* <Comments frontMatter={frontMatter} /> */}
             </div>
+
             <footer>
               <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
                 {tags && (
@@ -130,6 +147,53 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </div>
                 )}
               </div>
+              {isSubmitSuccessful ? (
+                <SuccessMessage handleReset={reset} />
+              ) : (
+                <div className="w-100 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+                  <p className="font-extrabold text-lg mb-2">
+                    Get early access to my tutorials and courses
+                  </p>
+                  <p className="mb-8">
+                    Leave your email address below and I'll notify you whenever new content is
+                    released.
+                  </p>
+                  <form className="sm:flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+                    <label htmlFor="email-address" className="sr-only">
+                      Email address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      required
+                      className="w-full dark:bg-gray-900 border-gray-500 px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-gray-800 dark:focus:ring-white rounded-md"
+                      placeholder="Enter your email"
+                      {...register('email', {
+                        required: 'Email is required.',
+                        pattern: {
+                          value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                        },
+                        message: 'Please enter a vaild email.',
+                      })}
+                      disabled={isSubmitting}
+                    />
+                    <ErrorMessage errors={errors} name="email" />
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-500 hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:w-auto sm:flex-shrink-0"
+                    >
+                      Get notified
+                    </button>
+                  </form>
+                  <p className="mt-3 text-sm text-gray-600 dark:text-gray-100">
+                    I won't spam. Promise.
+                  </p>
+                </div>
+              )}
               <div className="pt-4 xl:pt-8">
                 <Link
                   href="/content"

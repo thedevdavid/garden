@@ -21,7 +21,7 @@ module.exports = {
       },
       colors: {
         darkBg: '#101827',
-        darkBgLight: '#1F2936',
+        darkBgLight: '#27272a',
         blue: colors.lightBlue,
         code: {
           green: '#b5f4a5',
@@ -31,7 +31,7 @@ module.exports = {
           blue: '#93ddfd',
           white: '#fff',
         },
-        primary: colors.teal,
+        primary: colors.emerald,
         gray: colors.trueGray,
         ...colors,
       },
@@ -64,7 +64,7 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             code: {
-              color: theme('colors.pink.500'),
+              color: theme('colors.fuchsia.300'),
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',

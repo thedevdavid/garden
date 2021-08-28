@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="flex items-center justify-center py-16 min-w-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center justify-between lg:flex-row">
+        <div className="flex flex-col items-center justify-between xl:flex-row">
           <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 xl:mb-0 xl:w-6/12">
             <p className="mb-2 text-base font-medium tracking-tight text-green-600 uppercase">
               Digital Garden of

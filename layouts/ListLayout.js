@@ -17,7 +17,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="divide-y">
+      <div className="divide-y max-w-6xl mx-auto">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
@@ -54,9 +54,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               <Link
                 href={`/${slug}`}
                 key={slug}
-                className="flex group hover:bg-gray-100 dark:hover:bg-gray-800 bg-transparent bg-opacity-20 px-2 hover:rounded-xl transition duration-200"
+                className="my-4 flex group hover:bg-gray-100 dark:hover:bg-gray-800 bg-transparent bg-opacity-20 px-2 hover:rounded-xl transition duration-200"
               >
-                <li className="py-4">
+                <li className="py-12 px-4">
                   <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
                       <dt className="sr-only">Published on</dt>
