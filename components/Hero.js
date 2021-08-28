@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from '@/components/Image'
+import Link from '@/components/link'
 
 const Hero = () => {
   return (
@@ -37,7 +37,7 @@ const Hero = () => {
               around.
             </p>
             <Link href="https://twitter.com/iamdavidlevai">
-              <a
+              <p
                 className="my-3 font-bold text-sm leading-6 text-green-600 flex flex-row items-center"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -54,12 +54,12 @@ const Hero = () => {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </a>
+              </p>
             </Link>
           </div>
           <div className="w-full xl:w-5/12">
             <Link href="/projects">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
+              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
                     width={36}
@@ -85,10 +85,10 @@ const Hero = () => {
                     production-ready software.
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
             <Link href="/content">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
                     width={36}
@@ -112,11 +112,11 @@ const Hero = () => {
                     Videos and written notes about freelancing, and building production-ready apps.
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
 
             <Link href="/mentoring">
-              <a className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-darkBgLight shadow rounded-none mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <svg
                     width={36}
@@ -142,7 +142,7 @@ const Hero = () => {
                     in business.
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
           </div>
         </div>

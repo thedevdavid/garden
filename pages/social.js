@@ -18,7 +18,7 @@ export default function Social() {
               href={d.href}
               className="w-full p-6 hover:bg-gray-100 hover:bg-opacity-40 hover:rounded-xl group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter transition duration-200 cursor-pointer mb-8"
             >
-              <a className="flex items-center justify-start">
+              <div className="flex items-center justify-start">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
                   <svg
                     width={36}
@@ -43,7 +43,7 @@ export default function Social() {
                     {d.description}
                   </p>
                 </div>
-              </a>
+              </div>
             </Link>
           ))}
         </div>

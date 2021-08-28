@@ -19,7 +19,7 @@ export default async (req, res) => {
     const API_URL = process.env.CONVERTKIT_API_URL
 
     // Send request to ConvertKit
-    const data = { email, api_key: API_KEY, tags: ['garden-form', list] }
+    const data = { email, api_key: API_KEY }
 
     const response = await fetch(`${API_URL}forms/${FORM_ID}/subscribe`, {
       body: JSON.stringify(data),

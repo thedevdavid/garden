@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import { BookOpenIcon, VideoCameraIcon, CodeIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
+import Link from '@/components/Link'
 
 const links = [
   {
@@ -48,10 +48,10 @@ export default function FourOFour() {
                   <h3 className="text-base font-medium text-gray-900">
                     <span className="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                       <Link href="/" className="focus:outline-none">
-                        <a>
+                        <>
                           <span className="absolute inset-0" aria-hidden="true" />
                           {link.title}
-                        </a>
+                        </>
                       </Link>
                     </span>
                   </h3>
@@ -65,9 +65,9 @@ export default function FourOFour() {
           </ul>
           <div className="mt-8">
             <Link href="/" className="text-base font-medium">
-              <a>
+              <>
                 Or go back home<span aria-hidden="true"> &rarr;</span>
-              </a>
+              </>
             </Link>
           </div>
         </div>

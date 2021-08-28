@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from '@/components/Image'
 import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Link from '@/components/Link'
