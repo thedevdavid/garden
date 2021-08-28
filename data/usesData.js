@@ -20,6 +20,11 @@ const usesData = [
     href: 'https://superhuman.com',
   },
   {
+    title: 'Reclaim *',
+    description: `Blocking my time and managing my availability for my coworkers`,
+    href: 'https://reclaim.ai/r/s/g6YY2',
+  },
+  {
     title: 'VSCode',
     description: `Click here to find my plugins & config`,
     href: 'https://gist.github.com/DLevai94/c1b69f72a7deb472506ee3cf5f559f81',
