@@ -38,28 +38,28 @@ export default function FourOFour() {
           <h2 className="text-sm font-semibold tracking-wide uppercase">Popular pages</h2>
           <ul className="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
             {links.map((link, linkIdx) => (
-              <li key={linkIdx} className="relative py-6 flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <span className="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-50">
-                    <link.icon className="h-6 w-6 text-indigo-700" aria-hidden="true" />
-                  </span>
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-base font-medium text-gray-900">
-                    <span className="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                      <Link href="/" className="focus:outline-none">
-                        <>
-                          <span className="absolute inset-0" aria-hidden="true" />
-                          {link.title}
-                        </>
-                      </Link>
+              <li key={linkIdx} className="">
+                <Link
+                  href={link.route}
+                  className="focus:outline-none relative py-6 flex items-center space-x-4"
+                >
+                  <div className="flex-shrink-0">
+                    <span className="flex items-center justify-center h-12 w-12 rounded-lg">
+                      <link.icon className="h-6 w-6 text-primary-700" aria-hidden="true" />
                     </span>
-                  </h3>
-                  <p className="text-base">{link.description}</p>
-                </div>
-                <div className="flex-shrink-0 self-center">
-                  <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-                </div>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-base font-medium">
+                      <span className="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        {link.title}
+                      </span>
+                    </h3>
+                    <p className="text-base">{link.description}</p>
+                  </div>
+                  <div className="flex-shrink-0 self-center">
+                    <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                </Link>
               </li>
             ))}
           </ul>
