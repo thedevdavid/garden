@@ -40,6 +40,7 @@ export default function FourOFour() {
             {links.map((link, linkIdx) => (
               <li key={linkIdx} className="">
                 <Link
+                  key={linkIdx}
                   href={link.route}
                   className="focus:outline-none relative py-6 flex items-center space-x-4"
                 >

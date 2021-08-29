@@ -3,7 +3,7 @@ const siteMetadata = {
   author: 'David Levai',
   headerTitle: '@iamdavidlevai',
   description:
-    "Thoughts and resources about building business' and apps. Essays about freelancing, software business, productivity, working out, and how to go for be a better person every day.",
+    'Thoughts and resources about building software businesses and apps. Essays about freelancing, software business, productivity, working out, and how to go for be a better person every day.',
   language: 'en-us',
   siteUrl: 'https://davidlevai.com',
   siteRepo: 'https://github.com/dlevai94/garden',

@@ -6,7 +6,7 @@ export default function SaasKit() {
     <>
       <PageSEO
         title={`SaaS Kit - ${siteMetadata.author}`}
-        description={`Saas Kit - ${siteMetadata.author}`}
+        description={`Saas Kit - ${siteMetadata.author} - Helping to grow digital product agencies and indie developers.`}
       />
       <div className="divide-y">
         <div className="mt-24 text-center">

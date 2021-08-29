@@ -11,6 +11,7 @@ export default function Social() {
         description={siteMetadata.description}
       />
       <div className="container py-12 max-w-6xl mx-auto">
+        <h1>Helping to grow digital product agencies and indie developers</h1>
         <div className="flex flex-row flex-wrap">
           {socialData.map((d) => (
             <Link

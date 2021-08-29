@@ -2,7 +2,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/blog/:post", "destination": "/:post" },
     {
       "source": "/blog/glassmorphism-with-tailwind-css-under-60-seconds",
       "destination": "/tailwind-glassmorphism"
@@ -10,6 +9,22 @@
     {
       "source": "/content/glassmorphism-with-tailwind-css-under-60-seconds",
       "destination": "/tailwind-glassmorphism"
+    },
+    {
+      "source": "/glassmorphism-with-tailwind-css-under-60-seconds",
+      "destination": "/tailwind-glassmorphism"
+    },
+    {
+      "source": "/blog/why-i-fired-my-biggest-client",
+      "destination": "/fired-my-client"
+    },
+    {
+      "source": "/content/why-i-fired-my-biggest-client",
+      "destination": "/fired-my-client"
+    },
+    {
+      "source": "/why-i-fired-my-biggest-client",
+      "destination": "/fired-my-client"
     }
   ]
 }
