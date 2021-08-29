@@ -31,8 +31,9 @@ module.exports = {
           blue: '#93ddfd',
           white: '#fff',
         },
-        primary: colors.emerald,
+        fuchsia: colors.fuchsia,
         gray: colors.trueGray,
+        primary: colors.emerald,
         ...colors,
       },
       typography: (theme) => ({

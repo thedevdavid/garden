@@ -48,7 +48,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, lastmod } = frontMatter
             return (
               <Link
                 href={`/${slug}`}
@@ -57,12 +57,22 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               >
                 <li className="py-12 px-4">
                   <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
+                    <div>
+                      <dl>
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <time dateTime={date}>{formatDate(date)}</time>
+                        </dd>
+                      </dl>
+                      {lastmod && (
+                        <dl>
+                          <dt className="mt-8">Last updated</dt>
+                          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                            <time dateTime={lastmod}>{formatDate(lastmod)}</time>
+                          </dd>
+                        </dl>
+                      )}
+                    </div>
                     <div className="space-y-3 xl:col-span-3">
                       <div>
                         <h3 className="text-2xl font-bold leading-8 tracking-tight">

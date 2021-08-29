@@ -12,107 +12,130 @@ with dynamic content, too! It’s modern architecture that provides an outstandi
 infrastructure costs, easy scalability (with serverless architecture), and unbelievable SEO capabilities. To better
 understand this, we should travel back in time, [Where Wizards Stay Up Late](https://amzn.to/3yuoUvL) [^1]
 
-[^1]: Yep, that’s a reference to a wonderful book
-
 **Table of Contents**
 
-<TOCInline toc={props.toc} toHeading={2} />
+<TOCInline toc={props.toc} toHeading={3} />
 
 ## History of the World Wide Web
 
 In order to give things a little perspective, I recommend to check out the [first website ever](http://info.cern.ch/hypertext/WWW/TheProject.html).
-The WorldWideWeb (W3) is a wide-area hypermedia information retrieval initiative aiming to give universal
-access to a large universe of documents. Welcome to the beginnings of the Internet.
-To help give a more detailed picture of how everything started, much of what there is online about W3 is linked
-directly or indirectly to this article, including an executive summary of the project, Mailing lists , Policy ,
-November’s W3 news and Frequently Asked Questions .
-
-## In The Beginning
 
 In the beginning, the internet consisted only of static sites. They were just markups, no wonderful styling,
-dynamic data, had ugly PHP, or unnecessary server-client-server communications. While this was great for the
-time, it started growing and the way consumers consumed content started changing. The late 1990’s and early
+dynamic data, no *ugly* PHP, or unnecessary server-client-server communications. While this was great for the
+time, the Internet started growing and the way consumers consumed content started changing. The late 1990’s and early
 2000’s brought more dynamic content, interactions (like posting and commenting), and the web 2.0.
+
 As an answer for the consumers’ need for more interactions and control, Content Management Systems (CMS)
-were born, like WordPress or Drupal (high5 to folks, who know Joomla! or e107). These monolithic systems
+were born, like WordPress or Drupal *(high5 to folks, who remember Joomla! or e107)*. These monolithic systems
 traditionally saved data into SQL databases, ran on a shared hosting with Apache & PHP, were managed by
 cPanel, and caused lots of headaches.
+
+<Image alt="The first website ever" src="/static/images/jamstack/first-website-ever.jpg" layout="responsive" width={1000} height={369} />
 
 ## How Do CMS’s Work?
 
 In a nutshell, when a user opens a WordPress  website, the client asks the server for the whole page and it’s
 content, the server then queries the database, which gets back to the server with the data. Then the server
-generates that data at run time, to give it back to the user. Is this good or bad? Well, while this gives the
-opportunity to create dynamic content, it needs unnecessary high processing power and it is extremely
+generates that data at run time, to give it back to the user.
+
+Is this good or bad? Well, while this gives the opportunity to create dynamic content, it needs unnecessary high processing power and it is extremely
 vulnerable, especially for a marketing website, which is the most common usage of CMS.
 
-## The Web is Slow
+## Problems
 
-The web becomes slower and slower because WordPress’s architecture has not been developed very much over
+### The Web is Slow
+
+The web becomes slower and slower because CMS’s architecture has not been developed very much over
 the years. It goes through the same long process, referred to above, every single time – when a user opens a page
 it doesn’t matter if the user or any other user viewed the page before.
 
-The next stage of the World Wide Web was mobile. The end of 2000’s and the 2010’s were all about mobile
-devices, 3G & 4G networks, the death of Flash (we will never forget you, ActionScript…), smartphones and tablets.
+**The next stage of the World Wide Web was mobile.** The end of 2000’s and the 2010’s were all about mobile
+devices, 3G & 4G networks, the death of Flash *(we will never forget you, ActionScript…)*, smartphones and tablets.
 The usage of mobile phones and tablets for browsing exploded, but these devices weren’t as fast as they are now,
-especially with 3G only connection. Less processing power, smaller screens, and slower connections meant a
-worse user experience, which resulted in less conversions (about half of the mobile users leave the website if it
-loads for more than 3 seconds) and sales (every 100ms of waiting time means 7 percent less sales!). It was
+especially with 3G only connection.
+
+Less processing power, smaller screens, and slower connections meant a worse user experience, which resulted in less conversions [^2] and sales [^3]. It was
 obvious there was a burning need for more optimized and mobile friendly websites.
 
-<EmailCTA />
+<EmailCTA embedded />
 
-## CMS’s Are Not Secure
+### CMS’s Are Not Secure
 
 Why aren’t CMS’s secure? There are two main reasons. First, because of the unnecessary client-server
 communication on every pageview, which creates an opportunity for hackers to hijack that connection. The risk
-exponentially grows, if that CMS is a well known (looking at you, WP, by powering 30% of the internet) one. And
+exponentially grows, if that CMS is a well known *(looking at you, WP, by powering +30% of the internet)* one. And
 we didn’t even mention the sites with tens or hundreds of installed plugins and themes without updating those
 even once after the client handover.
 
-The other reason is because they are not secure, from the customer’s point of view. Google (you know, the
-company behind everything internet) works hard and makes it their mission to create a more polished experience
+The other reason is from the customer’s point of view. Google *(you know, the
+company behind everything internet)* works hard and makes it their mission to create a more polished experience
 for its users. So, they update the Search Algorithm from time to time. Most of these, however, are not handled
-well by boxed CMS systems and shared hosting providers. Think about the 2015 Mobilegeddon, or the mandatory
+well by boxed CMS systems and shared hosting providers. Think about the **2015 Mobilegeddon**, or the mandatory
 SSL from January 2018, or the 2021 Page-Experience Update. This one is a killer for most unoptimized CMS’s or
 dynamic websites.
 
-So, what about JAMStack? Word consists of Javascript (JS), API, Markup, but this doesn’t mean that you’ll strictly
-need JS to start using it. Why is it better than the previous examples?
+## So, what about JAMStack?
+
+Word consists of Javascript, API, Markup, but this doesn’t mean that you’ll strictly
+need JS to start using it. What makes it better than the previous examples?
 
 JAMStack sites do not require a server connection because these are static supercharged sites and the client only
 gets a static HTML file (and the linked assets too, of course). But where are they served from? JAMStack sites are
 traditionally hosted on your preferred VCS (GitHub, GitLab, etc.) and get deployed to CDN’s near your customers.
 This means extraordinary low latency, fast loading times, and no vulnerable servers/connections.
 
-Developer experience is outstanding. Use the tools you’re familiar with. React? Go with Next.js or Gatsby. Vue?
+**Developer experience is freaking cool.** Use the tools you’re familiar with. React? Go with Next.js or Gatsby. Vue?
 Try out Nuxt.js or Vuepress. Plain old JavaScript? 11ty? Continuous Integration? These all have you covered. Just
-link your git provider and get testing – deployment and previews are free. Focus on front-end development,
+link your git provider to [Vercel](https://vercel.com) or [Netlfiy](hettps://netlify.com) and get testing, deployment, and previews are free. Focus on front-end development,
 deploy to the Edge by using one command, create backend functionalities with serverless Javascript functions
 and feel the power.
 
-Need to scale? No problem, CDN handles it through Vercel or Netlify. Leave this frustration to containers and load
-balancers on monolithic projects. Worried about costs? You don’t have to be! Start for free, then pay only for
+Need to scale? No problem, providers handling it through CDN. Leave this frustration of containers and load
+balancers on monolithic projects. Worried about costs? You don’t have to be! **Start for free**, then pay only for
 bandwidth once you have reached over thousands of page views and data transfers.
 
-## Static vs. Dynamic Content
+<div className="w-full flex flex-col my-22 font-extrabold">
+  <div className="flex-1 flex flex-row p-0">
+    <div className="flex-1 bg-yellow-600 py-4 px-12 border-2 border-transparent text-center text-gray-800">
+      JavaScript
+    </div>
+    <div className="flex-1 bg-red-500 py-4 px-12 border-2 border-transparent text-center text-gray-800">
+      API
+    </div>
+    <div className="flex-1 bg-fuchsia-400 py-4 px-12 border-2 border-transparent text-center text-gray-800">
+      Markup
+    </div>
+  </div>
+  <div className="flex-1 bg-primary-500 py-4 px-12 border-2 border-transparent text-center text-gray-800">
+    JAM
+  </div>
+</div>
+
+### Static vs. Dynamic Content
 
 With JAMStack you have two options. First, go fully static and update data by coding when you need it. It isn’t
-user friendly, but it works. The second option is to use a headless CMS, which is fully detached from your
+user friendly, but it works. The second option is to use a *headless CMS* or API, which is fully detached from your
 application. A fully featured CMS system tailored to your needs. It could be a database backed one, or Markdown
-based. How do you consume it? There is the J, A, and M from the JAM = Javascript, APIs, and Markup. Consume
+based.
+
+How do you consume it? There is the J, A, and M from the JAM = Javascript, APIs, and Markup. Consume
 Headless CMS API’s with some data fetching from JavaScript, and display them in your Markup. Every CMS
 update triggers a build, which builds your website by your Static Site Generator (SSG) or Server Side Rendering
 (SSR). This way your dynamic content will always be static.
 
-## Is JAMStack the Future?
+### Is JAMStack the Future?
 
 Well, there are some serious disputes surrounding whether JAMStack is the future, mostly by Matt Mulenweg,
 WordPress Co-Founder. But the industry is definitely growing and going in this direction. One of the biggest
-players in the JAMStack field is Netlify which reached 1 million devs this year, and lots of other big corporations
+players in the JAMStack field is Netlify which reached 1 million devs in 2020, and lots of other big companies
 have started using it. Some of those corporations include Nike, Spotify, IBM, Figma, AirBnB, Braun, Hopper,
-Victoria Beckham Beauty, Figma, and counting…
+Victoria Beckham Beauty, Figma, Louis Vuitton, and counting…
 
 ## How to Get Started with JAMStack
 
 Ping me on [Twitter](https://twitter.com/iamdavidlevai) and I'm happy to help.
+
+
+[^1]: Yep, that’s a reference to a wonderful book
+[^2]: About half of the mobile users leave the website if it loads for more than 3 seconds
+[^3]: every 100ms of waiting time means 7 percent less sales!

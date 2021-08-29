@@ -7,6 +7,7 @@ const EmailCTA = ({
   description = 'I learned these in the past 10 years by building a digital product development agency, and dozens of different web & mobile applications for clients and myself.',
   list = 'monthly',
   cta = 'I want to be notified!',
+  embedded = false,
 }) => {
   const {
     register,
@@ -25,7 +26,11 @@ const EmailCTA = ({
   return (
     <div className="">
       <div className="mx-auto">
-        <div className="px-12 py-12 bg-gray-100 dark:bg-gray-800 rounded-xl lg:flex lg:items-center">
+        <div
+          className={`${
+            embedded ? 'px-4 py-2' : 'px-12 py-12'
+          } bg-gray-100 dark:bg-gray-800 rounded-xl lg:flex lg:items-center`}
+        >
           {isSubmitSuccessful ? (
             <SuccessMessage handleReset={reset} />
           ) : (
