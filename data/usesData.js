@@ -15,6 +15,11 @@ const usesData = [
     href: 'https://lunchmoney.app/?refer=3lxx87ps',
   },
   {
+    title: 'Raycast',
+    description: `Productivity on Mac`,
+    href: 'https://www.raycast.com/',
+  },
+  {
     title: 'Superhuman',
     description: `Email client with keybindings`,
     href: 'https://superhuman.com',
