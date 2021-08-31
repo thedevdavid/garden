@@ -60,6 +60,11 @@ const usesData = [
     href: 'https://obsidian.md/',
   },
   {
+    title: 'Doppler (*)',
+    description: `Secure .env file storage with cloud integrations`,
+    href: 'https://doppler.com/join?invite=45A76339',
+  },
+  {
     title: 'Figma',
     description: `Designs and graphics`,
     href: 'https://figma.com',
