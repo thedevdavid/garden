@@ -85,6 +85,11 @@ const usesData = [
     href: 'https://bitwarden.com/',
   },
   {
+    title: 'Coinbase (*)',
+    description: `Playing with crypto.`,
+    href: 'https://www.coinbase.com/join/dvid_wvr',
+  },
+  {
     title: 'Fantastical',
     description: `Still waiting for a better calendar app, but until then, this cuts it.`,
     href: 'https://flexibits.com/fantastical',
