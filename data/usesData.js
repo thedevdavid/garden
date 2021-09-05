@@ -25,6 +25,11 @@ const usesData = [
     href: 'https://superhuman.com',
   },
   {
+    title: 'RescueTime (*)',
+    description: `Tracking and analyzing my time`,
+    href: 'https://www.rescuetime.com/ref/1111282',
+  },
+  {
     title: 'Reclaim *',
     description: `Blocking my time and managing my availability for my coworkers`,
     href: 'https://reclaim.ai/r/s/g6YY2',
