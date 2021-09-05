@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
   useAnalytics()
   const { pathname } = useRouter()
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" storageKey="iamdavidlevai-digital-garden">
+    <ThemeProvider attribute="class" storageKey="iamdavidlevai-digital-garden">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
