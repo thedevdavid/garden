@@ -60,6 +60,11 @@ const usesData = [
     href: 'https://apps.apple.com/us/app/lumafusion/id1062022008',
   },
   {
+    title: 'Canva (*)',
+    description: `Sometimes I use Canva to edit some images quickly.`,
+    href: 'https://www.canva.com/join/fjj-qgr-dgh',
+  },
+  {
     title: 'Obsidian',
     description: `Secure, locally stored research and notes. Native iOS and Mac apps. Syncs well through iCloud`,
     href: 'https://obsidian.md/',
