@@ -25,7 +25,7 @@ export default function About({ authorDetails }) {
             Recommended Reads
           </h2>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 pt-12">
+        <div className="items-start space-y-2 grid xl:grid-cols-3 xl:gap-x-8 pt-12">
           <Link href="https://amzn.to/3kAFipE" className="h-72 mb-12 group">
             <div className="group-hover:bg-opacity-40 h-full w-full bg-gray-100 dark:bg-gray-800 rounded-xl relative p-4">
               <div className="absolute left-0 bottom-0 px-4 py-6">
