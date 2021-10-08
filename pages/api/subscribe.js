@@ -9,27 +9,27 @@ export default async (req, res) => {
   if (!list) {
     return res.status(400).json({ error: 'List is required' })
   }
+  const FORM_ID =
+    list === '12-tips-production-apps'
+      ? process.env.EMAILOCTOPUS_TIPS_FORM_ID
+      : process.env.EMAILOCTOPUS_MONTHLY_FORM_ID
+  const API_KEY = process.env.EMAILOCTOPUS_API_KEY
+  const API_URL = process.env.EMAILOCTOPUS_API_URL
+
+  const data = { api_key: API_KEY, email_address: email }
+
+  const URL = `${API_URL}/${FORM_ID}/contacts`
 
   try {
-    const FORM_ID =
-      list === '12-tips-production-apps'
-        ? process.env.CONVERTKIT_TIPS_FORM_ID
-        : process.env.CONVERTKIT_MONTHLY_FORM_ID
-    const API_KEY = process.env.CONVERTKIT_API_KEY
-    const API_URL = process.env.CONVERTKIT_API_URL
-
-    // Send request to ConvertKit
-    const data = { email, api_key: API_KEY }
-
-    const response = await fetch(`${API_URL}forms/${FORM_ID}/subscribe`, {
-      body: JSON.stringify(data),
+    const response = await fetch(URL, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      method: 'POST',
+      body: JSON.stringify(data),
     })
 
-    // Any error from CK = return custom message
+    // Any error from = return custom message
     if (response.status >= 400) {
       return res.status(400).json({
         error: `There was an error subscribing to the list.`,

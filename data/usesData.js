@@ -50,9 +50,9 @@ const usesData = [
     href: 'https://api.daily.dev/get?r=DavidLevai',
   },
   {
-    title: 'ConvertKit *',
+    title: 'EmailOctopus *',
     description: `Newsletter, automations, and being in touch with my subscribers.`,
-    href: 'https://app.convertkit.com/referrals/l/14369ce0-e00a-484a-a363-bec29afb9e01',
+    href: 'https://emailoctopus.com/?urli=tPw76',
   },
   {
     title: 'LumaFusion',
