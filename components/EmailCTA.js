@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form'
+import * as Fathom from 'fathom-client'
 import { ErrorMessage } from '@hookform/error-message'
 import SuccessMessage from '@/components/SuccessMessage'
-import { usePlausible } from 'next-plausible'
 
 const EmailCTA = ({
-  title = 'Get early access to tutorials and courses about building a business in IT',
+  title = 'Join 100+ developers getting early access to tutorials and courses about building a business in IT',
   description = 'I learned these in the past 10 years by building a digital product development agency, and dozens of different web & mobile applications for clients and myself.',
   list = 'monthly',
   cta = 'I want to be notified!',
@@ -16,17 +16,16 @@ const EmailCTA = ({
     reset,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm()
-  const plausible = usePlausible()
 
   const subscribe = async ({ email }) => {
     const res = await fetch(`/api/subscribe?email=${email}&list=${list}`)
+    if (res.ok) {
+      Fathom.trackGoal('HJIZXWMZ', 0)
+    }
     return res
   }
 
-  const onSubmit = (data) => {
-    plausible('Subscribe to newsletter')
-    subscribe(data)
-  }
+  const onSubmit = (data) => subscribe(data)
 
   return (
     <div className="">
