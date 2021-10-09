@@ -1,8 +1,8 @@
 const usesData = [
   {
-    title: 'Fathom Analytics *',
+    title: 'Plausible Analytics',
     description: `Privacy friendly analytics`,
-    href: 'https://usefathom.com/ref/F6KQFM',
+    href: 'https://plausible.io',
   },
   {
     title: 'Linear',
