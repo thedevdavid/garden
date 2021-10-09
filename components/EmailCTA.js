@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import SuccessMessage from '@/components/SuccessMessage'
+import { usePlausible } from 'next-plausible'
 
 const EmailCTA = ({
   title = 'Get early access to tutorials and courses about building a business in IT',
@@ -15,13 +16,17 @@ const EmailCTA = ({
     reset,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm()
+  const plausible = usePlausible()
 
   const subscribe = async ({ email }) => {
     const res = await fetch(`/api/subscribe?email=${email}&list=${list}`)
     return res
   }
 
-  const onSubmit = (data) => subscribe(data)
+  const onSubmit = (data) => {
+    plausible('Subscribe to newsletter')
+    subscribe(data)
+  }
 
   return (
     <div className="">

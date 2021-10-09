@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
   useAnalytics()
   const { pathname } = useRouter()
   return (
-    <PlausibleProvider domain="davidlevai.com">
+    <PlausibleProvider domain="davidlevai.com" trackOutboundLinks>
       <ThemeProvider attribute="class" storageKey="iamdavidlevai-digital-garden">
         <Head>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
