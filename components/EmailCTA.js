@@ -41,7 +41,9 @@ const EmailCTA = ({
             <>
               <div className="lg:w-0 lg:flex-1">
                 <h2 className="text-3xl font-extrabold tracking-tight">{title}</h2>
-                <p className="mt-4 max-w-3xl text-md">{description}</p>
+                <p className="mt-4 max-w-3xl text-md text-gray-500 dark:text-gray-400">
+                  {description}
+                </p>
               </div>
               <div className="sm:w-full sm:max-w-md lg:ml-8 lg:flex-1">
                 <form className="sm:flex flex-col" onSubmit={handleSubmit(onSubmit)}>

@@ -1,6 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
-import socialData from '@/data/socialData'
 import Link from '@/components/Link'
 
 export default function Social() {
@@ -10,44 +9,105 @@ export default function Social() {
         title={`Social Media - ${siteMetadata.author}`}
         description={siteMetadata.description}
       />
-      <div className="container py-12 max-w-6xl mx-auto">
-        <h1>Helping to grow digital product agencies and indie developers</h1>
-        <div className="flex flex-row flex-wrap">
-          {socialData.map((d) => (
-            <Link
-              key={d.href}
-              href={d.href}
-              className="w-full p-6 hover:bg-gray-100 hover:bg-opacity-40 hover:rounded-xl group dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter transition duration-200 cursor-pointer mb-8"
-            >
-              <div className="flex items-center justify-start">
-                <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
-                  <svg
-                    width={36}
-                    height={36}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="leading-6 text-center text-gray-700 dark:text-gray-50 align-middle stroke-current w-12 h-12"
-                  >
-                    <path d="M4 17L10 11 4 5" />
-                    <path d="M12 19L20 19" />
-                  </svg>
-                </div>
-                <div className="flex flex-col p-3">
-                  <h3 className="text-sm font-bold leading-5 text-gray-800 dark:text-white truncate sm:text-base lg:text-base">
-                    {d.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 sm:text-base lg:text-sm xl:text-base">
-                    {d.description}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
+      <div className="container mx-auto">
+        <div className="py-12 grid grid-cols-1 gap-8 grid-rows-3">
+          <div className="grid gap-8 items-start my-2">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-600 to-amber-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <Link href="https://dvdlv.me/yt">
+                <a className="relative px-7 py-4 bg-white dark:bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                  <span className="flex items-center space-x-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-green-600 -rotate-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      />
+                    </svg>
+                    <span className="pr-6 text-gray-900 dark:text-gray-100">
+                      2 videos weekly on my YouTube channel
+                    </span>
+                  </span>
+                  <span className="pl-6 text-amber-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-200">
+                    Go &rarr;
+                  </span>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-8 items-start my-2">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <Link href="https://tiktok.com/@iamdavidlevai">
+                <a className="relative px-7 py-4 bg-white dark:bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                  <span className="flex items-center space-x-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-pink-600 -rotate-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      />
+                    </svg>
+                    <span className="pr-6 text-gray-900 dark:text-gray-100">
+                      Dropping byte-sized tips on TikTok
+                    </span>
+                  </span>
+                  <span className="pl-6 text-indigo-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-200">
+                    Go &rarr;
+                  </span>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-8 items-start my-2">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-fuchsia-600 to-primary-600  rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <Link href="https://instagram.com/iamdavidlevai">
+                <a className="relative px-7 py-4 bg-white dark:bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                  <span className="flex items-center space-x-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-fuchsia-600 -rotate-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                      <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                      />
+                    </svg>
+                    <span className="pr-6 text-gray-900 dark:text-gray-100">
+                      Travel & Fitness on IG
+                    </span>
+                  </span>
+                  <span className="pl-6 text-primary-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-200">
+                    Go &rarr;
+                  </span>
+                </a>
+              </Link>
+            </div>
+          </div>
         </div>
+        <h1>Helping to grow digital product agencies and indie developers</h1>
       </div>
     </>
   )

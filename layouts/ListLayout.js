@@ -58,20 +58,20 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 <li className="py-12 px-4">
                   <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <div>
+                      {lastmod && (
+                        <dl>
+                          <dt className="text-gray-500 dark:text-gray-400">Last updated</dt>
+                          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                            <time dateTime={lastmod}>{formatDate(lastmod)}</time>
+                          </dd>
+                        </dl>
+                      )}
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date)}</time>
                         </dd>
                       </dl>
-                      {lastmod && (
-                        <dl>
-                          <dt className="mt-8">Last updated</dt>
-                          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                            <time dateTime={lastmod}>{formatDate(lastmod)}</time>
-                          </dd>
-                        </dl>
-                      )}
                     </div>
                     <div className="space-y-3 xl:col-span-3">
                       <div>

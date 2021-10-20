@@ -7,6 +7,22 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        tilt: 'tilt 4s infinite linear',
+      },
+      keyframes: {
+        tilt: {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(0.5deg)',
+          },
+          '75%': {
+            transform: 'rotate(-0.5deg)',
+          },
+        },
+      },
       spacing: {
         '9/16': '56.25%',
       },
@@ -20,7 +36,7 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        darkBg: '#101827',
+        darkBg: '#060606',
         darkBgLight: '#27272a',
         blue: colors.lightBlue,
         code: {
