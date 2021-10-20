@@ -5,7 +5,7 @@ import formatDate from '@/lib/utils/formatDate'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 8
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('content')

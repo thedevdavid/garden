@@ -18,7 +18,7 @@ const EmailCTA = ({
   } = useForm()
 
   const subscribe = async ({ email }) => {
-    const res = await fetch(`/api/subscribe?email=${email}&list=${list}`)
+    const res = await fetch(`/api/emailoctopus?email=${email}&list=${list}`)
     if (res.ok) {
       Fathom.trackGoal('HJIZXWMZ', 0)
     }

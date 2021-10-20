@@ -8,6 +8,8 @@ import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import Comments from '@/components/comments'
+import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/content/${fileName}`
 const discussUrl = (slug) =>
@@ -24,7 +26,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   } = useForm()
 
   const subscribe = async ({ email }) => {
-    const res = await fetch(`/api/subscribe?email=${email}&list=monthly`)
+    const res = await fetch(`/api/emailoctopus?email=${email}&list=monthly`)
     return res
   }
 
@@ -38,6 +40,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         authorDetails={authorDetails}
         {...frontMatter}
       />
+      <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
@@ -105,7 +108,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 {` • `}
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
               </div>
-              {/* <Comments frontMatter={frontMatter} /> */}
+              <Comments frontMatter={frontMatter} />
             </div>
 
             <footer>
