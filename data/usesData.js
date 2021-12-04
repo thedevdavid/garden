@@ -105,9 +105,9 @@ const usesData = [
     href: 'https://www.coinbase.com/join/dvid_wvr',
   },
   {
-    title: 'Fantastical',
-    description: `Still waiting for a better calendar app, but until then, this cuts it.`,
-    href: 'https://flexibits.com/fantastical',
+    title: 'Cron',
+    description: `The calendar app of my dreams. No questions.`,
+    href: 'https://cron.com/',
   },
 ]
 
