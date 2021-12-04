@@ -10,6 +10,11 @@ const usesData = [
     href: 'https://linear.app',
   },
   {
+    title: 'Xolo (*)',
+    description: `I run my businesses through Estonian e-Residency provider, Xolo`,
+    href: 'https://xolo.io/ref/DAVLEV1',
+  },
+  {
     title: 'LunchMoney *',
     description: `Budgeting and money management`,
     href: 'https://lunchmoney.app/?refer=3lxx87ps',

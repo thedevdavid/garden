@@ -22,11 +22,11 @@ const Hero = () => {
           </h2>
         </div>
         <p className="mt-2 text-lg ">
-          Creating content about building IT businesses and production-ready apps.
+          Digital nomad creating content about building IT businesses and production-ready apps.
         </p>
         <p className="mt-8 text-sm text-gray-400 dark:text-gray-400">
           Topics: React/Next.js, no-code, low-code, building businesses, building apps, freelancing,
-          productivity, working out, and some other millenial things.
+          productivity, digital nomad life, working out, and some other millenial things.
         </p>
 
         <Link href="https://twitter.com/iamdavidlevai">
@@ -140,7 +140,7 @@ const Hero = () => {
                   </span>
                 </span>
                 <span className="pl-6 text-primary-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-200">
-                  Mentoring &rarr;
+                  Mentoring & Courses &rarr;
                 </span>
               </a>
             </Link>
