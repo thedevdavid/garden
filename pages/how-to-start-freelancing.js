@@ -39,7 +39,6 @@ export default function HowToStartFreelancing() {
               <div className="flex-shrink-0">
                 <Link
                   href="/how-to-start-freelancing"
-                  title
                   className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 font-black text-xl"
                 >
                   DevBizAcademy
@@ -61,9 +60,25 @@ export default function HowToStartFreelancing() {
                     downside – our time is spent building software according to someone else’s
                     vision rather than our own.
                   </p>
-                  <p className="mt-1 text-lg text-gray-600 sm:mt-8 ">
+                  <p className="mt-1 text-lg text-gray-600 sm:mt-8 prose">
                     This is a <strong>free 5-day email course</strong> that will teach you how to
                     get started in business and growing as a software engineer while doing it.
+                    <ol>
+                      <li>
+                        Why freelancing/consulting is a great way for developers to earn and learn
+                        more
+                      </li>
+                      <li>
+                        What skills do you need to be a great entrepreneur/freelancer in the
+                        software industry
+                      </li>
+                      <li>Entrepreneurial developer's toolkit</li>
+                      <li>
+                        Getting started. What you need to know. Freelancing, small business,
+                        contracting - what's the difference
+                      </li>
+                      <li>How to find clients</li>
+                    </ol>
                   </p>
                   {isSubmitSuccessful ? (
                     <SuccessMessage handleReset={reset} />

@@ -39,7 +39,6 @@ export default function BusinessOfIT() {
               <div className="flex-shrink-0">
                 <Link
                   href="/business-of-it"
-                  title
                   className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 font-black text-xl"
                 >
                   DevBizAcademy
