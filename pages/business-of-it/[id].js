@@ -75,3 +75,7 @@ export default function MailPage({ content }) {
     </>
   )
 }
+
+MailPage.getLayout = function getLayout(page) {
+  return <div className="max-w-5xl mx-auto">{page}</div>
+}

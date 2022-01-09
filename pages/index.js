@@ -40,7 +40,7 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="md:max-w-5xl lg:max-w-7xl mx-auto flex flex-col md:flex-row">
+      <div className="md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col md:flex-row">
         <div className="md:w-7/12">
           <div className="pt-6 pb-8 space-y-2">
             <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
