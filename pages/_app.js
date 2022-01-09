@@ -1,7 +1,6 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { useAnalytics } from '@/lib/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
@@ -11,7 +10,6 @@ const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }) {
   useAnalytics()
-  const { pathname } = useRouter()
   const getLayout = Component.getLayout || ((page) => <LayoutWrapper>{page}</LayoutWrapper>)
   return (
     <>
