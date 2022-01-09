@@ -8,7 +8,7 @@ import Image from '@/components/Image'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 
-export default function HowToStartFreelancing() {
+export default function BusinessOfIT() {
   const {
     register,
     handleSubmit,
@@ -17,7 +17,7 @@ export default function HowToStartFreelancing() {
   } = useForm()
 
   const subscribe = async ({ email }) => {
-    const res = await fetch(`/api/emailoctopus?email=${email}&list=start-freelancing`)
+    const res = await fetch(`/api/emailoctopus?email=${email}&list=monthly`)
     if (res.ok) {
       Fathom.trackGoal('HJIZXWMZ', 0)
     }
@@ -38,7 +38,7 @@ export default function HowToStartFreelancing() {
             <div className="flex items-center justify-between">
               <div className="flex-shrink-0">
                 <Link
-                  href="/how-to-start-freelancing"
+                  href="/business-of-it"
                   title
                   className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 font-black text-xl"
                 >
@@ -61,9 +61,22 @@ export default function HowToStartFreelancing() {
                     downside – our time is spent building software according to someone else’s
                     vision rather than our own.
                   </p>
-                  <p className="mt-1 text-lg text-gray-600 sm:mt-8 ">
-                    This is a <strong>free 5-day email course</strong> that will teach you how to
-                    get started in business and growing as a software engineer while doing it.
+                  <p className="mt-8 text-gray-600 prose">
+                    Each month, I publish a newsletter about entrepreneurship, programming, digital
+                    products, productivity, digital nomad life.
+                    <br />
+                    What it contains:
+                    <ul>
+                      <li>a lesson from entrepreneurship</li>
+                      <li>best travel finds in the current country</li>
+                      <li>
+                        5 best finds in development, productivity, and business from last month
+                      </li>
+                      <li>2-3 most recent tutorials, content, courses</li>
+                      <li>
+                        status of my businesses and products, as well as how I'm building them
+                      </li>
+                    </ul>
                   </p>
                   {isSubmitSuccessful ? (
                     <SuccessMessage handleReset={reset} />
@@ -93,7 +106,7 @@ export default function HowToStartFreelancing() {
                             type="submit"
                             className="inline-flex px-6 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg focus:outline-none focus:bg-gray-600  hover:bg-gray-600"
                           >
-                            I want the free course
+                            Let me see!
                           </button>
                         </div>
                       </div>
@@ -185,6 +198,6 @@ export default function HowToStartFreelancing() {
   )
 }
 
-HowToStartFreelancing.getLayout = function getLayout(page) {
+BusinessOfIT.getLayout = function getLayout(page) {
   return page
 }

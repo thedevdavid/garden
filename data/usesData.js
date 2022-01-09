@@ -1,4 +1,4 @@
-const usesData = [
+export const software = [
   {
     title: 'Fathom Analytics *',
     description: `Privacy friendly analytics`,
@@ -111,4 +111,4 @@ const usesData = [
   },
 ]
 
-export default usesData
+export const hardware = []

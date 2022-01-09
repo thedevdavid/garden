@@ -17,6 +17,9 @@ export default async (req, res) => {
     case 'tailwind':
       FORM_ID = process.env.EMAILOCTOPUS_TAILWIND_FORM_ID
       break
+    case 'start-freelancing':
+      FORM_ID = process.env.EMAILOCTOPUS_FREELANCING_FORM_ID
+      break
     default:
       FORM_ID = process.env.EMAILOCTOPUS_MONTHLY_FORM_ID
       break

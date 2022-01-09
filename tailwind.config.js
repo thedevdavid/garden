@@ -3,7 +3,6 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
-  darkMode: false,
   theme: {
     extend: {
       animation: {

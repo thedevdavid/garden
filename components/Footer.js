@@ -5,12 +5,14 @@ import EmailCTA from '@/components/EmailCTA'
 import Signature from '@/data/davidlevai-sign.svg'
 import SectionContainer from './SectionContainer'
 
-export default function Footer() {
+export default function Footer({ cta = true }) {
   return (
     <footer className="mt-12">
-      <SectionContainer>
-        <EmailCTA />
-      </SectionContainer>
+      {cta && (
+        <SectionContainer>
+          <EmailCTA />
+        </SectionContainer>
+      )}
       <div className="mx-auto mb-4 mt-12 flex justify-center">
         <Signature />
       </div>

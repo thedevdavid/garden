@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
+import Image from '@/components/Image'
 import SuccessMessage from '@/components/SuccessMessage'
 
 const DownloadableCTA = ({
@@ -74,7 +75,7 @@ const DownloadableCTA = ({
             </div>
           </div>
           <div className="-mt-6 aspect-w-[5/3] md:aspect-[2/1]">
-            <img
+            <Image
               className="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
               src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
               alt="Glassmorph components"

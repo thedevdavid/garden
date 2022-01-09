@@ -24,10 +24,10 @@ const Hero = () => {
                 freelancing, productivity, digital nomad life, and some other seriously cool sh*t.
               </p>
               <Link
-                href="/start-here"
+                href="/how-to-start-freelancing"
                 className="inline-flex px-8 py-4 mt-6 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
               >
-                Start here
+                Start Freelancing in 2022
               </Link>
             </div>
           </div>

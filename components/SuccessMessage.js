@@ -1,8 +1,8 @@
 import { XIcon } from '@heroicons/react/outline'
 
 const SuccessMessage = ({ handleReset }) => (
-  <p className="p-3 flex items-center justify-center">
-    <span>Success. Check your inbox and confirm your email.</span>
+  <p className="p-5 flex items-center justify-center">
+    <span>Success. Check your inbox, confirm your email and you're ready to learn!</span>
     <span className="self-center text-center flex mr-1 items-center">
       <button
         onClick={() => handleReset()}

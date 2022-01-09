@@ -1,6 +1,6 @@
 import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
-import usesData from '@/data/usesData'
+import { software } from '@/data/usesData'
 import Link from '@/components/Link'
 
 export default function Uses() {
@@ -17,9 +17,12 @@ export default function Uses() {
           comission. This helps me deliver free content day by day.
         </p>
         <section>
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-3 md:mt-20">
-              {usesData.map((d) => (
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-6 md:mt-12">
+            <h2 className="text-2xl mb-0 font-extrabold leading-9 tracking-tight text-gray-900 sm:text-2xl sm:leading-10 md:text-4xl">
+              Software
+            </h2>
+            <div className="grid grid-cols-1 gap-6 mt-2 sm:grid-cols-2 lg:grid-cols-3">
+              {software.map((d) => (
                 <Link
                   key={d.href}
                   href={d.href}
