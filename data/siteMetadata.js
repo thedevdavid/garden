@@ -1,10 +1,11 @@
 const siteMetadata = {
   title: "David Levai's Digital Garden",
   author: 'David Levai',
-  headerTitle: '@iamdavidlevai',
+  headerTitle: 'David Levai',
   description:
     'Thoughts and resources about building software businesses and apps. Essays about freelancing, software business, productivity, working out, and how to go for be a better person every day.',
   language: 'en-us',
+  theme: 'light',
   siteUrl: 'https://davidlevai.com',
   siteRepo: 'https://github.com/dlevai94/garden',
   image: '/static/images/avatar.png',
@@ -20,7 +21,7 @@ const siteMetadata = {
     provider: 'emailoctopus',
   },
   comment: {
-    provider: 'giscus', // supported providers: giscus, utterances, disqus
+    provider: 'giscus', // supported providers: giscus
     giscusConfig: {
       repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
       repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,

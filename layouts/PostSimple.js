@@ -17,11 +17,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article>
         <div>
           <header>
-            <div className="pb-10 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
+            <div className="pb-10 space-y-1 text-center border-b border-gray-200">
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-base font-medium leading-6 text-gray-500">
                     <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
                 </div>
@@ -32,11 +32,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 "
+            className="pb-8 divide-y divide-gray-200 xl:divide-y-0"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+            <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
+              <div className="pt-10 pb-8 prose max-w-none">{children}</div>
             </div>
             <Comments frontMatter={frontMatter} />
             <footer>
@@ -45,7 +45,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/${prev.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      className="text-primary-500 hover:text-primary-600"
                     >
                       &larr; {prev.title}
                     </Link>
@@ -55,7 +55,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/${next.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      className="text-primary-500 hover:text-primary-600"
                     >
                       {next.title} &rarr;
                     </Link>

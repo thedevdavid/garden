@@ -11,7 +11,7 @@ github: https://github.com/DLevai94
 
 I'm a Part-Time Creator and full-time COO @ [ScreamingBox](https://screamingbox.com).
 
-I create various types of content across [Twitter](https://twitter.com/iamdavidlevai), [YouTube](https://dvdlv.me), [LinkedIn](https://linkedin.com/in/iamdavidlevai),[TikTok](https://tiktok.com/@iamdavidlevai), and this blog about **building IT businesses and production-ready apps.**
+I create various types of content across [Twitter](https://twitter.com/iamdavidlevai), [YouTube](https://dvdlv.me), [LinkedIn](https://linkedin.com/in/iamdavidlevai), [TikTok](https://tiktok.com/@iamdavidlevai), and this blog about **building IT businesses and production-ready apps.**
 
 Since my teenage years, I have worked as a freelance full-stack developer mostly with
 startups and small businesses. In 2020 I decided to use this knowledge to scale a

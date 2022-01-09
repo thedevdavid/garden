@@ -27,18 +27,18 @@ class MyDocument extends Document {
           <link
             rel="preload"
             as="style"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
             media="print"
             onLoad="this.media='all'"
           />
           <noscript>
             <link
               rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
             />
           </noscript>
           <meta
@@ -46,7 +46,7 @@ class MyDocument extends Document {
             name="google-site-verification"
           />
         </Head>
-        <body className="antialiased text-black bg-white dark:bg-darkBg dark:text-white">
+        <body className="antialiased text-black bg-gray-50">
           <Main />
           <NextScript />
         </body>

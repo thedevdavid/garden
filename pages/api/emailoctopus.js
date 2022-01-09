@@ -9,10 +9,18 @@ export default async (req, res) => {
   if (!list) {
     return res.status(400).json({ error: 'List is required' })
   }
-  const FORM_ID =
-    list === '12-tips-production-apps'
-      ? process.env.EMAILOCTOPUS_TIPS_FORM_ID
-      : process.env.EMAILOCTOPUS_MONTHLY_FORM_ID
+  let FORM_ID = ''
+  switch (list) {
+    case '12-tips-production-apps':
+      FORM_ID = process.env.EMAILOCTOPUS_TIPS_FORM_ID
+      break
+    case 'tailwind':
+      FORM_ID = process.env.EMAILOCTOPUS_TAILWIND_FORM_ID
+      break
+    default:
+      FORM_ID = process.env.EMAILOCTOPUS_MONTHLY_FORM_ID
+      break
+  }
   const API_KEY = process.env.EMAILOCTOPUS_API_KEY
   const API_URL = process.env.EMAILOCTOPUS_API_URL
 

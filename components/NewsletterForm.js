@@ -36,7 +36,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
 
   return (
     <div>
-      <div className="pb-1 text-lg font-semibold text-gray-800 dark:text-gray-100">{title}</div>
+      <div className="pb-1 text-lg font-semibold text-gray-800">{title}</div>
       <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
@@ -44,7 +44,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
           </label>
           <input
             autoComplete="email"
-            className="px-4 rounded-md w-72 dark:bg-black focus:outline-none focus:ring-2 focus:border-transparent focus:ring-primary-600"
+            className="px-4 rounded-md w-72 focus:outline-none focus:ring-2 focus:border-transparent focus:ring-primary-600"
             id="email-input"
             name="email"
             placeholder={subscribed ? "You're subscribed !  🎉" : 'Enter your email'}
@@ -57,8 +57,8 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         <div className="flex w-full mt-2 rounded-md shadow-sm sm:mt-0 sm:ml-3">
           <button
             className={`py-2 sm:py-0 w-full bg-primary-500 px-4 rounded-md font-medium text-white ${
-              subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
-            } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:ring-offset-black`}
+              subscribed ? 'cursor-default' : 'hover:bg-primary-700'
+            } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600`}
             type="submit"
             disabled={subscribed}
           >
@@ -66,9 +66,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
           </button>
         </div>
       </form>
-      {error && (
-        <div className="pt-2 text-sm text-red-500 w-72 sm:w-96 dark:text-red-400">{message}</div>
-      )}
+      {error && <div className="pt-2 text-sm text-red-500 w-72 sm:w-96">{message}</div>}
     </div>
   )
 }
@@ -77,7 +75,7 @@ export default NewsletterForm
 
 export const BlogNewsletterForm = ({ title }) => (
   <div className="flex items-center justify-center">
-    <div className="p-6 bg-gray-100 dark:bg-gray-800 sm:px-14 sm:py-8">
+    <div className="p-6 bg-gray-100 sm:px-14 sm:py-8">
       <NewsletterForm title={title} />
     </div>
   </div>
