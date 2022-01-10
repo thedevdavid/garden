@@ -35,7 +35,7 @@ export const software = [
     href: 'https://www.rescuetime.com/ref/1111282',
   },
   {
-    title: 'Reclaim *',
+    title: 'Reclaim (*)',
     description: `Blocking my time and managing my availability for my coworkers`,
     href: 'https://reclaim.ai/r/s/g6YY2',
   },
@@ -50,12 +50,12 @@ export const software = [
     href: 'https://gist.github.com/DLevai94/af307fb45d525ffebf38750970f98ed2',
   },
   {
-    title: 'Daily.dev *',
+    title: 'Daily.dev (*)',
     description: `Homepage to stay up to date in the dev world`,
     href: 'https://api.daily.dev/get?r=DavidLevai',
   },
   {
-    title: 'EmailOctopus *',
+    title: 'EmailOctopus (*)',
     description: `Newsletter, automations, and being in touch with my subscribers.`,
     href: 'https://emailoctopus.com/?urli=tPw76',
   },
@@ -73,6 +73,11 @@ export const software = [
     title: 'Obsidian',
     description: `Secure, locally stored research and notes. Native iOS and Mac apps. Syncs well through iCloud`,
     href: 'https://obsidian.md/',
+  },
+  {
+    title: 'Readwise',
+    description: `Daily prompts to read my book highlights and notes.`,
+    href: 'https://readwise.io/i/david9695',
   },
   {
     title: 'Doppler (*)',
