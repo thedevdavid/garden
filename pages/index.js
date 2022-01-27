@@ -1,7 +1,3 @@
-import { useForm } from 'react-hook-form'
-import * as Fathom from 'fathom-client'
-import { ErrorMessage } from '@hookform/error-message'
-import SuccessMessage from '@/components/SuccessMessage'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import HomeLayout from '@/components/HomeLayout'
@@ -20,23 +16,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm()
-
-  const subscribe = async ({ email }) => {
-    const res = await fetch(`/api/emailoctopus?email=${email}&list=newsletter`)
-    if (res.ok) {
-      Fathom.trackGoal('HJIZXWMZ', 0)
-    }
-    return res
-  }
-
-  const onSubmit = (data) => subscribe(data)
-
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -106,7 +85,7 @@ export default function Home({ posts }) {
             <div className="prose">
               <ul className="my-2">
                 <li className="">
-                  <span>Mexico City</span>
+                  <span>Los Angeles, USA</span>
                 </li>
               </ul>
             </div>
@@ -117,7 +96,7 @@ export default function Home({ posts }) {
             <div className="prose">
               <ul className="my-2">
                 <li className="">Scaling ScreamingBox</li>
-                <li className="">Free 5-days email course on freelancing</li>
+                <li className="">418 Podcast</li>
               </ul>
             </div>
             <Link href="/projects" className="text-primary-500 hover:text-primary-600">
@@ -159,38 +138,32 @@ export default function Home({ posts }) {
                   <li>status of my businesses and products, as well as how I'm building them</li>
                 </ul>
               </p>
-              {isSubmitSuccessful ? (
-                <SuccessMessage handleReset={reset} />
-              ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="mt-16">
-                  <label htmlFor="email" className="text-lg font-bold text-white font-pj">
-                    Wanna join?
-                  </label>
-                  <div className="relative max-w-lg mx-auto mt-5 lg:mx-0">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                    <div className="relative">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Enter your email address"
-                        className="block w-full px-5 py-6 text-base font-normal text-white placeholder-gray-400 bg-gray-900 border border-transparent rounded-xl focus:border-white focus:ring-1 focus:ring-white focus:outline-none"
-                        required
-                        {...register('email', {
-                          required: 'Email is required.',
-                          pattern: {
-                            value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                          },
-                          message: 'Please enter a vaild email.',
-                        })}
-                        disabled={isSubmitting}
-                      />
-                      <ErrorMessage errors={errors} name="email" />
-                      <div className="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-3">
-                        <button
-                          disabled={isSubmitting}
-                          type="submit"
-                          className="
+              <form
+                action="http://business-of-it.davidlevai.com/add_subscriber"
+                method="post"
+                id="revue-form"
+                name="revue-form"
+                target="_blank"
+                className="mt-16"
+              >
+                <label htmlFor="member_email" className="text-lg font-bold text-white font-pj">
+                  Wanna join?
+                </label>
+                <div className="relative max-w-lg mx-auto mt-5 lg:mx-0">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                  <div className="relative">
+                    <input
+                      type="email"
+                      name="member[email]"
+                      id="member_email"
+                      placeholder="Enter your email address"
+                      className="revue-form-field block w-full px-5 py-6 text-base font-normal text-white placeholder-gray-400 bg-gray-900 border border-transparent rounded-xl focus:border-white focus:ring-1 focus:ring-white focus:outline-none"
+                      required
+                    />
+                    <div className="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-3">
+                      <button
+                        type="submit"
+                        className="
                           inline-flex
                           items-center
                           justify-center
@@ -209,14 +182,13 @@ export default function Home({ posts }) {
                           font-pj
                           hover:bg-opacity-90
                           rounded-xl"
-                        >
-                          Send me an episode
-                        </button>
-                      </div>
+                      >
+                        Send me an episode
+                      </button>
                     </div>
                   </div>
-                </form>
-              )}
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -236,7 +208,7 @@ export default function Home({ posts }) {
               alt="avatar"
               width="320px"
               height="320px"
-              className="w-80 h-80 rounded-full"
+              className="w-80 h-80 rounded-full hover:-rotate-2 duration-150 transition-all"
             />
             <div className="text-gray-500">Part-Time Creator & Full-Time COO</div>
             <div className="text-gray-500">ScreamingBox</div>

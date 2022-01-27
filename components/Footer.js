@@ -1,16 +1,16 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-import EmailCTA from '@/components/EmailCTA'
 import Signature from '@/data/davidlevai-sign.svg'
 import SectionContainer from './SectionContainer'
+import NewsletterCTA from './NewsletterCTA'
 
 export default function Footer({ cta = true }) {
   return (
     <footer className="mt-12">
       {cta && (
         <SectionContainer>
-          <EmailCTA />
+          <NewsletterCTA />
         </SectionContainer>
       )}
       <div className="mx-auto mb-4 mt-12 flex justify-center">
