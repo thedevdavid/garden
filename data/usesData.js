@@ -1,6 +1,6 @@
 export const software = [
   {
-    title: 'Fathom Analytics *',
+    title: 'Fathom Analytics (*)',
     description: `Privacy friendly analytics`,
     href: 'https://usefathom.com/ref/F6KQFM',
   },
@@ -10,12 +10,17 @@ export const software = [
     href: 'https://linear.app',
   },
   {
+    title: 'Riverside.fm',
+    description: `Podcast recording`,
+    href: 'https://riverside.fm/?utm_campaign=campaign_1&utm_medium=affiliate&utm_source=rewardful&via=david-levai',
+  },
+  {
     title: 'Xolo (*)',
     description: `I run my businesses through Estonian e-Residency provider, Xolo`,
     href: 'https://xolo.io/ref/DAVLEV1',
   },
   {
-    title: 'LunchMoney *',
+    title: 'LunchMoney (*)',
     description: `Budgeting and money management`,
     href: 'https://lunchmoney.app/?refer=3lxx87ps',
   },
@@ -75,7 +80,7 @@ export const software = [
     href: 'https://obsidian.md/',
   },
   {
-    title: 'Readwise',
+    title: 'Readwise (*)',
     description: `Daily prompts to read my book highlights and notes.`,
     href: 'https://readwise.io/i/david9695',
   },
@@ -90,7 +95,7 @@ export const software = [
     href: 'https://figma.com',
   },
   {
-    title: 'Notion *',
+    title: 'Notion (*)',
     description: `Permanent docs, organizing my life and my comapny`,
     href: 'https://www.notion.so/?r=b9b039621fdc4230b444f84cb877508c',
   },

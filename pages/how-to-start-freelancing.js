@@ -65,19 +65,21 @@ export default function HowToStartFreelancing() {
                     get started in business and growing as a software engineer while doing it.
                     <ol>
                       <li>
-                        Why freelancing/consulting is a great way for developers to earn and learn
-                        more
+                        Set yourself up for success - Why entrepreneurship is a great way for
+                        developers to earn and learn more
                       </li>
                       <li>
-                        What skills do you need to be a great entrepreneur/freelancer in the
-                        software industry
+                        The 3 ways of entrepreneurship as a software developer - How to decide what
+                        kind of business to start
                       </li>
-                      <li>Entrepreneurial developer's toolkit</li>
                       <li>
-                        Getting started. What you need to know. Freelancing, small business,
-                        contracting - what's the difference
+                        What skills do you need to be a great entrepreneur in the software industry
                       </li>
-                      <li>How to find clients</li>
+                      <li>Get started TODAY!</li>
+                      <li>
+                        How to keep developing your skills as a developer and an entrepreneur at the
+                        same time
+                      </li>
                     </ol>
                   </p>
                   {isSubmitSuccessful ? (

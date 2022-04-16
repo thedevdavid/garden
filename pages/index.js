@@ -85,7 +85,7 @@ export default function Home({ posts }) {
             <div className="prose">
               <ul className="my-2">
                 <li className="">
-                  <span>Los Angeles, USA</span>
+                  <span>Lima, Peru</span>
                 </li>
               </ul>
             </div>
