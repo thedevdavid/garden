@@ -45,7 +45,7 @@ export default function Social() {
           <div className="grid gap-8 items-start my-2">
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-              <Link href="https://tiktok.com/@iamdavidlevai">
+              <Link href="https://tiktok.com/@thedevdavid">
                 <a className="relative px-7 py-4 bg-white dark:bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
                   <span className="flex items-center space-x-5">
                     <svg
@@ -76,7 +76,7 @@ export default function Social() {
           <div className="grid gap-8 items-start my-2">
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-fuchsia-600 to-primary-600  rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-              <Link href="https://instagram.com/iamdavidlevai">
+              <Link href="https://instagram.com/thedevdavid">
                 <a className="relative px-7 py-4 bg-white dark:bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
                   <span className="flex items-center space-x-5">
                     <svg

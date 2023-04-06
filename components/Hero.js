@@ -29,7 +29,7 @@ const Hero = () => {
           productivity, digital nomad life, working out, and some other millenial things.
         </p>
 
-        <Link href="https://twitter.com/iamdavidlevai">
+        <Link href="https://twitter.com/thedevdavid">
           <a
             className="my-3 font-bold text-sm leading-6 text-green-600 hover:text-gray-100 flex flex-row items-center"
             target="_blank"

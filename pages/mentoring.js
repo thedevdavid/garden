@@ -14,7 +14,7 @@ export default function Mentoring() {
           <h1 className="text-lg font-extrabold">
             If you'd be interested in getting some guidance from me about any of the following
             topics, feel free to hit me up on{' '}
-            <Link className="text-primary-500 underline" href="https://twitter.com/iamdavidlevai">
+            <Link className="text-primary-500 underline" href="https://twitter.com/thedevdavid">
               Twitter DMs
             </Link>
             .
