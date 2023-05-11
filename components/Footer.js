@@ -6,7 +6,6 @@ import EmailCTA from '@/components/EmailCTA'
 export default function Footer() {
   return (
     <footer className="mt-12">
-      <EmailCTA />
       <div className="flex flex-col items-center mt-16">
         <div className="flex mb-3 space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />

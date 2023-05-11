@@ -70,7 +70,6 @@ const usesData = [
     href: 'https://www.notion.so/?r=b9b039621fdc4230b444f84cb877508c',
   },
   {
-  {
     title: 'Cron',
     description: `The calendar app of my dreams. No questions.`,
     href: 'https://cron.com/',
