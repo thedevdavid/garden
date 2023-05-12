@@ -17,7 +17,7 @@ const LayoutWrapper = ({ isHome, children }) => {
             <div>
               <Link href="/" aria-label="David Levai's Digital Garden">
                 <div className="flex items-center justify-between">
-                  <div className="mr-3">
+                  <div className="mr-3 fill-black dark:fill-white">
                     <Logo />
                   </div>
                   {typeof siteMetadata.headerTitle === 'string' ? (
